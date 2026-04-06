@@ -7,3 +7,42 @@ export interface Env {
   HYPERDRIVE: Hyperdrive
   AI: Ai
 }
+
+// Define an interface for the expected Wikipedia API response
+export interface WikipediaSummary {
+  title: string
+  displaytitle: string
+  pageid: number
+  description?: string
+  extract: string
+  extract_html: string
+  thumbnail?: {
+    source: string
+    width: number
+    height: number
+  }
+  content_urls: {
+    desktop: {
+      page: string
+      revisions: string
+      edit: string
+      talk: string
+    }
+    mobile: {
+      page: string
+      revisions: string
+      edit: string
+      talk: string
+    }
+  }
+}
+
+export interface NeonResponseMessage {
+  word: string
+  timestamp: number
+}
+
+export interface NeonResponse {
+  type: "challenge"
+  message: NeonResponseMessage[]
+}
