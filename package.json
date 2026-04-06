@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "build": "tsc",
+    "build:neon": "tsc --ignoreConfig --noCheck ./src/neon/index.ts",
+    "neon": "node src/neon/index.js"
+  },
+  "devDependencies": {
+    "@cloudflare/puppeteer": "^1.0.6",
+    "@cloudflare/workers-types": "^4.20260329.1",
+    "@neondatabase/serverless": "^1.0.2",
+    "dotenv": "^17.3.1",
+    "drizzle-kit": "^0.31.10",
+    "drizzle-orm": "^0.45.2",
+    "typescript": "^6.0.2",
+    "wrangler": "^4.80.0"
+  },
+  "dependencies": {
+    "expr-eval": "^2.0.2",
+    "itty-router": "^5.0.23",
+    "postgres": "^3.4.8"
+  },
+  "module": "build/neon/index.js"
+}

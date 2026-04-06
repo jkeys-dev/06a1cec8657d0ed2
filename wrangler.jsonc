@@ -1,0 +1,21 @@
+{
+  "name": "jkeys-dev",
+  "compatibility_date": "2026-03-16",
+  "main": "./src/neon/index.ts",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  // Bind the Cloudflare Browser Rendering API
+  "browser": {
+    "binding": "MYBROWSER",
+  },
+  "placement": {
+    // Planetscale database location
+    "region": "gcp:us-central1",
+  },
+  "observability": {
+    "enabled": true,
+  },
+  "ai": {
+    "binding": "AI",
+  },
+}
